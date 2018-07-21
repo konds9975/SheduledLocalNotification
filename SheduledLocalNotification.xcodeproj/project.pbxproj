@@ -12,6 +12,10 @@
 		DA3732D821035FE4008275A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3732D621035FE4008275A5 /* LaunchScreen.storyboard */; };
 		DA3732E321035FE9008275A5 /* SheduledLocalNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3732E221035FE9008275A5 /* SheduledLocalNotificationTests.swift */; };
 		DA3732EE21035FEA008275A5 /* SheduledLocalNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3732ED21035FEA008275A5 /* SheduledLocalNotificationUITests.swift */; };
+		DA37330A21036109008275A5 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA37330921036108008275A5 /* bell.mp3 */; };
+		DA37330C21036245008275A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37330B21036245008275A5 /* AppDelegate.swift */; };
+		DA37330E21036258008275A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA37330D21036258008275A5 /* Main.storyboard */; };
+		DA37331021036264008275A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37330F21036264008275A5 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		DA3732E921035FEA008275A5 /* SheduledLocalNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheduledLocalNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3732ED21035FEA008275A5 /* SheduledLocalNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduledLocalNotificationUITests.swift; sourceTree = "<group>"; };
 		DA3732EF21035FEA008275A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA37330921036108008275A5 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		DA37330B21036245008275A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA37330D21036258008275A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DA37330F21036264008275A5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,10 @@
 		DA3732C921035F9B008275A5 /* SheduledLocalNotification */ = {
 			isa = PBXGroup;
 			children = (
+				DA37330B21036245008275A5 /* AppDelegate.swift */,
+				DA37330F21036264008275A5 /* ViewController.swift */,
+				DA37330921036108008275A5 /* bell.mp3 */,
+				DA37330D21036258008275A5 /* Main.storyboard */,
 				DA3732D421035FE4008275A5 /* Assets.xcassets */,
 				DA3732D621035FE4008275A5 /* LaunchScreen.storyboard */,
 				DA3732D921035FE4008275A5 /* Info.plist */,
@@ -187,6 +199,7 @@
 				TargetAttributes = {
 					DA3732C621035F9A008275A5 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					DA3732DD21035FE9008275A5 = {
 						CreatedOnToolsVersion = 9.4;
@@ -223,8 +236,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA37330A21036109008275A5 /* bell.mp3 in Resources */,
 				DA3732D821035FE4008275A5 /* LaunchScreen.storyboard in Resources */,
 				DA3732D521035FE4008275A5 /* Assets.xcassets in Resources */,
+				DA37330E21036258008275A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA37331021036264008275A5 /* ViewController.swift in Sources */,
+				DA37330C21036245008275A5 /* AppDelegate.swift in Sources */,
 				DA3732D321035F9F008275A5 /* SheduledLocalNotification.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
 				INFOPLIST_FILE = SheduledLocalNotification/Info.plist;
@@ -423,6 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortune4.SheduledLocalNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
 				INFOPLIST_FILE = SheduledLocalNotification/Info.plist;
@@ -449,6 +469,7 @@
 		DA3732F621035FEA008275A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
@@ -469,6 +490,7 @@
 		DA3732F721035FEA008275A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
@@ -489,6 +511,7 @@
 		DA3732F921035FEA008275A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
 				INFOPLIST_FILE = SheduledLocalNotificationUITests/Info.plist;
@@ -508,6 +531,7 @@
 		DA3732FA21035FEA008275A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UMUY72KH99;
 				INFOPLIST_FILE = SheduledLocalNotificationUITests/Info.plist;
