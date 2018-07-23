@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         delegate?.sendNotificationIn5Seconds()
     }
 
+    @IBAction func dateSet(_ sender: UIDatePicker) {
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        delegate?.sendNotificationIn5Seconds(date1: sender.date)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
