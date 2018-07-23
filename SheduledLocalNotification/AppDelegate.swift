@@ -129,6 +129,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                 content.sound = UNNotificationSound.default()//UNNotificationSound(named: "bell.mp3")
                 
                 
+                
+                //
                 //let trigger = self.getOneMiniuteSnoozeTrigger(snoozeMinute:1)
                 //let trigger = self.getInstantTriggre()
                 //let trigger = self.getDailyTrigger(datetime: Date())
