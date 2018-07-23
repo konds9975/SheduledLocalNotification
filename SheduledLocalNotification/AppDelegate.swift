@@ -43,23 +43,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                     content.userInfo = ["SendInfo": "info"]
                     
                     
-//                    let now = Date()
+                    let now = Date()
 //                    let snoozeMinute = 1
 //                    let snoozeTime =  (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: snoozeMinute, to: now, options:.matchStrictly)!
 //                    let newDate = Date(timeInterval: 1, since: snoozeTime)
-//
-//
-//                    let triggerDaily = Calendar.current.dateComponents([hour, .minute, .second], from: date)
-//                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-                    
-//                    let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
-//                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-                    
-                    // Deliver the notification in five seconds.
-                    content.sound = UNNotificationSound.default()//UNNotificationSound(named: "bell.mp3")
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
                     
                     // Schedule the notification.
+                    
+                    //triggerWeekly
+                    let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: now)
+                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+                    //triggerWeekly
+
+//                    //triggerDaily
+//                    let triggerDaily = Calendar.current.dateComponents([.hour, .minute, .second], from: now)
+//                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+//                    //triggerDaily
+                    
+                    
+//                    // Deliver the notification in five seconds.
+//                    content.sound = UNNotificationSound.default()//UNNotificationSound(named: "bell.mp3")
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//                    // Deliver the notification in five seconds.
+                    
                     let request = UNNotificationRequest(identifier: "FiveSecond", content: content, trigger: trigger)
                     let center = UNUserNotificationCenter.current()
                     
