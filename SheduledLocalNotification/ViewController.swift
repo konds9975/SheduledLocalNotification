@@ -16,6 +16,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
        
 
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests { (notifications) in
+            print("Count: \(notifications.count)")
+            for item in notifications {
+                print(item.trigger)
+            }
+        }
+        
     }
     @IBAction func sendNotificationIn5Seconds() {
         let delegate = UIApplication.shared.delegate as? AppDelegate
@@ -25,7 +33,7 @@ class ViewController: UIViewController {
     @IBAction func dateSet(_ sender: UIDatePicker) {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
-        delegate?.sendNotificationIn5Seconds(date1: sender.date)
+        delegate?.sheduleNotification(date1: sender.date)
         
     }
     override func didReceiveMemoryWarning() {
